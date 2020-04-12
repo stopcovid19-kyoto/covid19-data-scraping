@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: copy
-        run: cp test.json dist/
+        run: mkdir -p dist && cp test.json dist/
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
